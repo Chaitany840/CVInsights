@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+error.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Uploaded files
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Temp files
+*.tmp
+tmp/
+server/out.txt
+server/test_output.json
+server/test_output2.json
+server/tmp_list_models.js
