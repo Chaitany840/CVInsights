@@ -1,5 +1,5 @@
 # 🚀 AI-Powered Resume & Career Path Analyzer
-https://ai-resume-analyzer-jgqj.vercel.app/
+https://cvinsights-1.onrender.com
 
 An intelligent web application that analyzes resumes and provides personalized career guidance using AI.
 
