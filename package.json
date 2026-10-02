@@ -1,13 +1,21 @@
 {
 	"name": "cvinsights",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "AI-powered resume analyzer and career path advisor (Express, MongoDB, Gemini)",
+	"main": "server/server.js",
 	"scripts": {
+		"start": "node server/server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"resume",
+		"ats",
+		"career",
+		"gemini",
+		"express",
+		"react"
+	],
+	"author": "Chaitany Kumar",
 	"license": "ISC",
 	"type": "commonjs",
 	"dependencies": {
