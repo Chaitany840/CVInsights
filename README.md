@@ -1,55 +1,54 @@
-# 🚀 AI-Powered Resume & Career Path Analyzer
-https://cvinsights-1.onrender.com
+# CVInsights: AI-Powered Resume & Career Path Analyzer
 
-An intelligent web application that analyzes resumes and provides personalized career guidance using AI.
+**Live demo:** https://cvinsights-1.onrender.com
 
----
-
-## 📌 Overview
-
-This project is designed to go beyond traditional resume analyzers.  
-It not only evaluates resumes but also helps users understand their **career direction** by identifying skill gaps and generating a **learning roadmap**.
+A full-stack web app that analyzes resumes with AI and turns the result into career guidance: an ATS score, skill gaps and a step-by-step learning roadmap.
 
 ---
 
-## 🎯 Features
+## Problem
 
-- 📄 Resume Upload (PDF/DOCX)
-- 🧠 Resume Parsing & Text Extraction
-- 📊 ATS Score Analysis
-- 🧩 Skill Extraction
-- 📉 Skill Gap Detection
-- 🚀 Career Path Recommendations
-- 📚 Personalized Learning Roadmap
-- 🎨 Modern Dashboard UI
+Most resume checkers stop at a score. Users still don't know *what to learn next*. CVInsights closes that gap by combining resume analysis with career-path recommendations.
 
----
+## Features
 
-## 🧠 What Makes It Unique?
+- Resume upload and text extraction (PDF)
+- ATS score analysis
+- Skill extraction from the resume
+- Skill gap detection against a target career path
+- Career path recommendations
+- Personalized learning roadmap
+- User accounts with JWT authentication
+- Dashboard UI
 
-Unlike traditional resume tools, this project:
+## How it works
 
-- Combines **Resume Analysis + Career Guidance**
-- Provides **Skill Gap Insights**
-- Generates **Step-by-Step Learning Roadmap**
-- Uses **AI for dynamic suggestions**
+1. The user signs up or logs in (passwords hashed with bcrypt, sessions via JWT).
+2. The resume is uploaded (Multer) and its text is extracted (pdf-parse).
+3. The extracted text is sent to Google's Gemini API, which returns the ATS analysis, extracted skills, skill gaps and recommendations.
+4. Results are stored in MongoDB (Mongoose) and shown on the dashboard.
 
-> “This project doesn’t just analyze resumes — it helps users grow their careers.”
+## Tech stack
 
----
+| Layer | Technology |
+|---|---|
+| Frontend | React, Tailwind CSS |
+| Backend | Node.js, Express |
+| Database | MongoDB (Mongoose) |
+| AI | Google Generative AI (Gemini) |
+| Auth & security | JWT, bcryptjs, CORS, express-rate-limit |
+| File handling | Multer, pdf-parse |
 
-## 🛠 Tech Stack
+## Getting started
 
-### Frontend
-- React.js
-- Tailwind CSS
+```bash
+git clone https://github.com/Chaitany840/CVInsights.git
+cd CVInsights
+npm install
+```
 
-### Backend
-- Node.js
-- Express.js
+Create a `.env` file in the project root with your MongoDB connection string, a JWT secret and a Gemini API key, then start the server.
 
-### Database
-- MongoDB
+## Author
 
-### AI Integration
-- AI APIs (for resume analysis & recommendations)
+Chaitany Kumar · [LinkedIn](https://linkedin.com/in/chaitany-kumar) · [GitHub](https://github.com/Chaitany840)
